@@ -7,63 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Assets/css/stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+
 </head>
 <!-- Creating html layout -->
 
 <body>
+
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <nav>
-        <h2>Search for A City</h2>
-        <form>
-            <input type="text">
-            <button id="search">Search</button>
-
-            <button class="optionButton">Austin</button>
-            <button class="optionButton">Chicago</button>
-            <button class="optionButton">New York</button>
-            <button class="optionButton">Orlando</button>
-            <button class="optionButton">San Francisco</button>
-            <button class="optionButton">Seattle</button>
-            <button class="optionButton">Denver</button>
-            <button class="optionButton">Atlanta</button>
-
-        </form>
-    </nav>
     <div class="content">
-        <div id="today">
-            <h3>Atlanta</h3>
-            <ul>
-                <li>Temp:0</li>
+        <nav class='column' id='left'>
+            <h2>Search for A City</h2>
+            <form>
+                <input type="text">
+                <button id="search">Search</button>
 
-                <li>Temp:0</li>
+                <button class="optionButton">Austin</button>
+                <button class="optionButton">Chicago</button>
+                <button class="optionButton">New York</button>
+                <button class="optionButton">Orlando</button>
+                <button class="optionButton">San Francisco</button>
+                <button class="optionButton">Seattle</button>
+                <button class="optionButton">Denver</button>
+                <button class="optionButton">Atlanta</button>
 
-                <li>Temp:0</li>
+            </form>
+        </nav>
+        <div class="column" id='right'>
+            <div id="todaysDatas" class="todays-datas">
+                <h3>Atlanta</h3>
 
-                <li>Temp:0</li>
+                <p class='today-data'>Temp:0</p>
 
-            </ul>
-        </div>
-        <div id="fiveDay">
-            <div class="card">
-                <h6>Heading</h6><img src='' />
+                <p class='today-data'>Wind</p>
+
+                <p class='today-data'>Humidty</p>
+
+                <p class='today-data'>UV index</p>
             </div>
-            <div class="card">
-                <h6>Heading</h6><img src='' />
-            </div>
+            <div id="fiveDays" class="cards">
+                <div class="card">
+                    <h6>Heading</h6><img class='five-day-img' src='' />
+                    <p>Temp</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
 
-            <div class="card">
-                <h6>Heading</h6><img src='' />
-            </div>
-            <div class="card">
-                <h6>Heading</h6><img src='' />
-            </div>
-            <div class="card">
-                <h6>Heading</h6><img src='' />
+                </div>
+                <div class="card">
+                    <h6>Heading</h6><img class='five-day-img' src='' />
+                    <p>Temp</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
+                </div>
+
+                <div class="card">
+                    <h6>Heading</h6><img class='five-day-img' src='' />
+                    <p>Temp</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
+                </div>
+                <div class="card">
+                    <h6>Heading</h6><img class='five-day-img' src='' />
+                    <p>Temp</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
+                </div>
+                <div class="card">
+                    <h6>Heading</h6><img class='five-day-img' src='' />
+                    <p>Temp</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
+                </div>
             </div>
         </div>
     </div>
+    <script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
