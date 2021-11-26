@@ -14,7 +14,7 @@ var lat = "";
 var lon = "";
 
 var cityName = "";
-
+var img = [];
 var getData = function(cityName) {
     var card = [];
 
@@ -43,7 +43,20 @@ var getData = function(cityName) {
                     daily.appendChild(card[i]);
                     var cardById = document.getElementById('card' + iToString);
                     h3 = document.createElement('h3');
+                    img[i] = document.createElement('img');
+                    img[i].setAttribute('id', 'imageWeatherIcon' + iToString);
+                    cardById.appendChild(img[i]);
+
+                    document.getElementById('imageWeatherIcon' + iToString).src = 'http://openweathermap.org/img/wn/10d@2x.png';
+                    http: //openweathermap.org/img/wn/10d@2x.png
+                        p1 = document.createElement('p');
+                    p2 = document.createElement('p');
+                    p3 = document.createElement('p');
+                    p4 = document.createElement('p');
                     cardById.appendChild(h3);
+                    cardById.appendChild(img);
+                    cardById.appendChild(p);
+
                     if (card[i] === 0) {
                         var unixTime = data2.current.dt;
                         var date = new Date(unixTime * 1000);
