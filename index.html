@@ -21,7 +21,7 @@
         <nav class='column' id='left'>
             <h2>Search for A City</h2>
             <form>
-                <input type="text">
+                <input type="text" id="searchInput">
                 <button id="search">Search</button>
 
                 <button class="optionButton">Austin</button>
@@ -39,16 +39,18 @@
             <div id="todaysDatas" class="todays-datas">
                 <h3>Atlanta</h3>
 
-                <p class='today-data'>Temp:0</p>
+                <p class='today-data'>Temp:<span id="temp"></span>&#176;F</p>
 
-                <p class='today-data'>Wind</p>
+                <p class='today-data'>Wind&nbsp;
+                    <span id="wind"></span>&nbsp;MPH </p>
 
-                <p class='today-data'>Humidty</p>
+                <p class='today-data'>Humidty
+                    <span id="humidity"></span>%</p>
 
-                <p class='today-data'>UV index</p>
+                <p class='today-data' id='uv'>UV index</p>
             </div>
             <div id="fiveDays" class="cards">
-                <div class="card">
+                <!-- <div class="card">
                     <h6>Heading</h6><img class='five-day-img' src='' />
                     <p>Temp</p>
                     <p>Wind</p>
@@ -79,11 +81,11 @@
                     <p>Temp</p>
                     <p>Wind</p>
                     <p>Humidity</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
-    <script src="./Assets/js/script.js"></script>
+    <script src="./Assets/js/script.js "></script>
 </body>
 
 </html>
