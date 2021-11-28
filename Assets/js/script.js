@@ -20,7 +20,7 @@ var img = [];
 
 
 if (localStorage.getItem("cityName") === null) {
-    alert('not set');
+
 } else {
     var cityNameSaved = localSgittorage.getItem("cityName");
     var button = document.createElement('button');
