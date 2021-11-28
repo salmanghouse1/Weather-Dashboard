@@ -126,6 +126,10 @@ h3 {
     flex-wrap: wrap;
 }
 
+.todays-datas p {
+    color: black;
+}
+
 .today-data {
     font-size: 22px;
 }
@@ -137,4 +141,27 @@ h3 {
 .five-day-img {
     height: 50px;
     width: 50px;
+}
+
+
+/* Five day forecasts styles */
+
+h3 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* UV today class */
+
+.uv {
+    background: darkgreen;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 20px 12px 20px;
 }

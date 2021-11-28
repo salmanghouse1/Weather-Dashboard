@@ -20,69 +20,26 @@
     <div class="content">
         <nav class='column' id='left'>
             <h2>Search for A City</h2>
-            <form>
+            <form id="searchForm">
                 <input type="text" id="searchInput">
                 <button id="search">Search</button>
 
-                <button class="optionButton">Austin</button>
-                <button class="optionButton">Chicago</button>
-                <button class="optionButton">New York</button>
-                <button class="optionButton">Orlando</button>
-                <button class="optionButton">San Francisco</button>
-                <button class="optionButton">Seattle</button>
-                <button class="optionButton">Denver</button>
-                <button class="optionButton">Atlanta</button>
-
             </form>
+            <div id="cityButtons">
+                <button class="optionButton" data-city="Austin">Austin</button>
+                <button class="optionButton" data-city="Chicago">Chicago</button>
+                <button class="optionButton" data-city="New York">New York</button>
+                <button class="optionButton" data-city="Orlando">Orlando</button>
+                <button class="optionButton" data-city="San Francisco">San Francisco</button>
+                <button class="optionButton" data-city="Seattle">Seattle</button>
+                <button class="optionButton" data-city="Denver">Denver</button>
+                <button class="optionButton" data-city="Atlanta">Atlanta</button>
+            </div>
         </nav>
         <div class="column" id='right'>
-            <div id="todaysDatas" class="todays-datas">
-                <h3>Atlanta</h3>
 
-                <p class='today-data'>Temp:<span id="temp"></span>&#176;F</p>
 
-                <p class='today-data'>Wind&nbsp;
-                    <span id="wind"></span>&nbsp;MPH </p>
 
-                <p class='today-data'>Humidty
-                    <span id="humidity"></span>%</p>
-
-                <p class='today-data' id='uv'>UV index</p>
-            </div>
-            <div id="fiveDays" class="cards">
-                <!-- <div class="card">
-                    <h6>Heading</h6><img class='five-day-img' src='' />
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-
-                </div>
-                <div class="card">
-                    <h6>Heading</h6><img class='five-day-img' src='' />
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-                </div>
-
-                <div class="card">
-                    <h6>Heading</h6><img class='five-day-img' src='' />
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-                </div>
-                <div class="card">
-                    <h6>Heading</h6><img class='five-day-img' src='' />
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-                </div>
-                <div class="card">
-                    <h6>Heading</h6><img class='five-day-img' src='' />
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-                </div> -->
-            </div>
         </div>
     </div>
     <script src="./Assets/js/script.js "></script>
