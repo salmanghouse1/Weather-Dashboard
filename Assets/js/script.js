@@ -15,7 +15,29 @@ var lon = "";
 
 var cityName = "";
 var img = [];
+
+// if there is a saved City
+
+
+if (localStorage.getItem("cityName") === null) {
+    alert('not set');
+} else {
+    var cityNameSaved = localSgittorage.getItem("cityName");
+    var button = document.createElement('button');
+    button.setAttribute('data-city', cityNameSaved);
+    button.setAttribute('class', 'optionButton');
+    button.setAttribute('id', cityNameSaved);
+    document.getElementById('cityButtons').appendChild(button);
+    document.getElementById(cityNameSaved).textContent = cityNameSaved;
+
+}
+
+
+
 var getData = function(cityName) {
+
+
+
 
 
 
@@ -97,6 +119,23 @@ var getData = function(cityName) {
 
 
 
+
+        if (cityName === data.name) {
+            // if city is right and exists add the city to the history
+            var button = document.createElement('button');
+            button.setAttribute('data-city', cityName);
+            button.setAttribute('class', 'optionButton');
+            button.setAttribute('id', cityName);
+            document.getElementById('cityButtons').appendChild(button);
+            document.getElementById(cityName).textContent = cityName;
+            window.localStorage.setItem('cityName', cityName);
+
+            // save the city to local storage and load it next time
+
+        } else {
+            // if input is not a valid city
+            alert('Not A Valid City');
+        }
 
         console.log(data);
         console.log(data.main.temp);
