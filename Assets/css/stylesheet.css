@@ -159,7 +159,21 @@ p {
 
 /* UV today class */
 
-.uv {
+.uv-low {
+    background: darkgreen;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 20px 12px 20px;
+}
+
+.uv-med {
+    background: darkgreen;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 20px 12px 20px;
+}
+
+.uv-high {
     background: darkgreen;
     border-radius: 10px;
     color: white;

@@ -20,9 +20,9 @@ var img = [];
 
 
 if (localStorage.getItem("cityName") === null) {
-    alert('not set');
+
 } else {
-    var cityNameSaved = localSgittorage.getItem("cityName");
+    var cityNameSaved = localStorage.getItem("cityName");
     var button = document.createElement('button');
     button.setAttribute('data-city', cityNameSaved);
     button.setAttribute('class', 'optionButton');
@@ -119,7 +119,6 @@ var getData = function(cityName) {
 
 
 
-
         if (cityName === data.name) {
             // if city is right and exists add the city to the history
             var button = document.createElement('button');
@@ -137,8 +136,7 @@ var getData = function(cityName) {
             alert('Not A Valid City');
         }
 
-        console.log(data);
-        console.log(data.main.temp);
+
         temperatureInFahrenheight = (data.main.temp - 273.15) * 9 / 5 + 32
 
         // Todays Data
@@ -150,7 +148,7 @@ var getData = function(cityName) {
         document.getElementById('humidity').textContent = 'Humidity: ' + data.main.humidity;
         document.getElementById('uvHolder').textContent = 'UV: ';
 
-        console.log(data.coord.lon);
+
         lon = data.coord.lon;
         lat = data.coord.lat;
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=3f3c84db569188d2c7dd0abf10be0fd4`).then(response => response.json()).then(data2 => {
@@ -161,11 +159,20 @@ var getData = function(cityName) {
                 var divUV = document.createElement('div');
 
                 divUV.setAttribute('id', 'uv');
+                // use if condition to add classes to uv
 
-                divUV.setAttribute('class', 'uv');
+                if (data2.current.uvi <= 2.99) {
+                    divUV.setAttribute('class', 'uv-low');
+                } else
+                if (data2.current.uvi >= 3 && data2.current.uvi <= 7.99) {
+                    divUV.setAttribute('class', 'uv-med');
 
+                } else if (data2.current.uvi > 8) {
+                    divUV.setAttribute('class', 'uv-high');
+
+                }
                 document.getElementById('uvHolder').appendChild(divUV);
-                console.log(document.querySelector('#uvHolder'));
+
 
 
                 document.getElementById('uv').textContent = data2.current.uvi;
@@ -189,8 +196,8 @@ var getData = function(cityName) {
                     card[i].setAttribute('class', 'card');
                     // get the string of ; iterator
                     iToString = i.toString();
-                    console.log(typeof(iToString))
-                        // create an id with card and iterator as id
+
+                    // create an id with card and iterator as id
                     card[i].setAttribute('id', 'card' + i);
                     // append the card
                     daily.appendChild(card[i]);
@@ -242,7 +249,7 @@ var getData = function(cityName) {
                         // five day data
 
                         unixTime[i] = data2.daily[i].dt;
-                        console.log(data2.daily[i].dt);
+
                         var date = new Date(unixTime[i] * 1000);
                         h3.textContent = date.toLocaleDateString("en-US");
                         document.getElementById('imageWeatherIcon' + i).src = 'http://openweathermap.org/img/wn/' +
