@@ -143,7 +143,7 @@ var getData = function(cityName) {
         document.getElementById('cityName').textContent = data.name;
 
 
-        document.getElementById('temp').textContent = 'Temp: ' + temperatureInFahrenheight;
+        document.getElementById('temp').textContent = 'Temp: ' + Math.round(temperatureInFahrenheight) + "°F";
         document.getElementById('wind').textContent = 'Wind Speed: ' + data.wind.speed;
         document.getElementById('humidity').textContent = 'Humidity: ' + data.main.humidity;
         document.getElementById('uvHolder').textContent = 'UV: ';
@@ -221,7 +221,7 @@ var getData = function(cityName) {
 
                     console.log(data2.daily);
 
-                    var avgTemp = data2.daily[i].temp.min + data2.daily[i].temp.max / 2;
+                    var avgTemp = (data2.daily[i].temp.min + data2.daily[i].temp.max) / 2;
                     temperatureInFahrenheightFiveDay[i] = (avgTemp - 273.15) * 9 / 5 + 32;
 
                     p1.textContent = 'Temp ' + Math.round(temperatureInFahrenheightFiveDay[i]) + '°F';
