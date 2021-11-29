@@ -115,7 +115,7 @@ var getData = function(cityName) {
 
 
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=3f3c84db569188d2c7dd0abf10be0fd4`).then(response => response.json()).then(data => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=3f3c84db569188d2c7dd0abf10be0fd4`).then(response => response.json()).then(data => {
 
 
 
@@ -242,7 +242,7 @@ var getData = function(cityName) {
                         document.getElementById('cityName').textContent += " " +
                             date.toLocaleDateString("en-US");;
                         h3.textContent = date.toLocaleDateString("en-US");
-                        document.getElementById('imageWeatherIcon' + i).src = 'http://openweathermap.org/img/wn/' +
+                        document.getElementById('imageWeatherIcon' + i).src = 'https://openweathermap.org/img/wn/' +
                             data2.daily[0].weather[0].icon + '.png';
                     }
                     if (i > 0) {
@@ -252,7 +252,7 @@ var getData = function(cityName) {
 
                         var date = new Date(unixTime[i] * 1000);
                         h3.textContent = date.toLocaleDateString("en-US");
-                        document.getElementById('imageWeatherIcon' + i).src = 'http://openweathermap.org/img/wn/' +
+                        document.getElementById('imageWeatherIcon' + i).src = 'https://openweathermap.org/img/wn/' +
                             data2.daily[i].weather[0].icon + '.png';
                     }
                 }
