@@ -37,8 +37,11 @@ THEN I am again presented with current and future conditions for that city
 The following image demonstrates the application functionality:
 
 ![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
+<<<<<<< HEAD
 
 Made by Salman
 
 
 
+=======
+>>>>>>> a9340574f925fc548f1060d17f3843fa7cc05230
